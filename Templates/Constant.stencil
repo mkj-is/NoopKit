@@ -1,4 +1,3 @@
-
 /// Higher-order function returning function which returns
 /// constant value.
 ///
