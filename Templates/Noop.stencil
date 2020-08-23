@@ -1,3 +1,6 @@
+/// Can be used instead of an empty closure as a syntactic sugar
+/// when not using so many parentheses and underlines is preferred.
+/// All passed parameters will not be used and thrown away.
 public func noop() {}
 
 {% for params in 1...argument.parameterCount %}

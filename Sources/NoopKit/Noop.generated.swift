@@ -1,6 +1,9 @@
 // Generated using Sourcery 1.0.0 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
 
+/// Can be used instead of an empty closure as a syntactic sugar
+/// when not using so many parentheses and underlines is preferred.
+/// All passed parameters will not be used and thrown away.
 public func noop() {}
 
 /// Can be used instead of an empty closure as a syntactic sugar
