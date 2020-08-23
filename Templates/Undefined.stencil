@@ -1,0 +1,22 @@
+/// Placeholder function to make clear it needs to be implemented.
+/// It is easier to find than empty braces.
+public func undefined<T>() -> T {
+    fatalError("Implement this undefined function or closure.")
+}
+
+{% for params in 1...argument.parameterCount %}
+/// Placeholder function to make clear it needs to be implemented.
+/// It is easier to find than empty braces.
+///
+/// Parameters:
+{% for p in 1...params %}/// - Parameter _: Parameter will be printed when passed
+{% endfor %}
+/// Returns: Never returns, calls fatal error internally.
+public func undefined<{% for p in 1...params %}P{{ p }}, {% endfor %}T>(
+    {% for p in 1...params %}_ p{{ p }}: P{{ p }}{% if p < params %},
+    {% endif %}{% endfor %}
+) -> T {
+    fatalError("Implement this undefined function or closure.\nParameters passed: {% for p in 1...params %}\(p{{ p }}){% if p < params %}, {% endif %}{% endfor %}")
+}
+
+{% endfor %}
