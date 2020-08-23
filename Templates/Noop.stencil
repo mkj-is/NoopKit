@@ -1,14 +1,14 @@
 public func noop() {}
 
-{% for params in 0...9 %}
+{% for params in 1...argument.parameterCount %}
 /// Can be used instead of an empty closure as a syntactic sugar
 /// when not using so many parentheses and underlines is preferred.
 /// All passed parameters will not be used and thrown away.
 /// Parameters:
-{% for p in 0...params %}/// - Parameter _: Parameter will be thrown away
+{% for p in 1...params %}/// - Parameter _: Parameter will be thrown away
 {% endfor %}
-public func noop<{% for p in 0...params %}P{{ p }}{% if p < params %}, {% endif %}{% endfor %}>(
-    {% for p in 0...params %}_: P{{ p }}{% if p < params %},
+public func noop<{% for p in 1...params %}P{{ p }}{% if p < params %}, {% endif %}{% endfor %}>(
+    {% for p in 1...params %}_: P{{ p }}{% if p < params %},
     {% endif %}{% endfor %}
 ) {}
 

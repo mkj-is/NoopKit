@@ -4,3 +4,5 @@ templates:
   - Templates
 output:
   Sources/NoopKit
+args:
+  parameterCount: 10

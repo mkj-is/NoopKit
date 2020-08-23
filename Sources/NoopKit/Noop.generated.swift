@@ -8,18 +8,7 @@ public func noop() {}
 /// All passed parameters will not be used and thrown away.
 /// Parameters:
 /// - Parameter _: Parameter will be thrown away
-public func noop<P0>(
-    _: P0
-) {}
-
-/// Can be used instead of an empty closure as a syntactic sugar
-/// when not using so many parentheses and underlines is preferred.
-/// All passed parameters will not be used and thrown away.
-/// Parameters:
-/// - Parameter _: Parameter will be thrown away
-/// - Parameter _: Parameter will be thrown away
-public func noop<P0, P1>(
-    _: P0,
+public func noop<P1>(
     _: P1
 ) {}
 
@@ -29,9 +18,7 @@ public func noop<P0, P1>(
 /// Parameters:
 /// - Parameter _: Parameter will be thrown away
 /// - Parameter _: Parameter will be thrown away
-/// - Parameter _: Parameter will be thrown away
-public func noop<P0, P1, P2>(
-    _: P0,
+public func noop<P1, P2>(
     _: P1,
     _: P2
 ) {}
@@ -43,9 +30,7 @@ public func noop<P0, P1, P2>(
 /// - Parameter _: Parameter will be thrown away
 /// - Parameter _: Parameter will be thrown away
 /// - Parameter _: Parameter will be thrown away
-/// - Parameter _: Parameter will be thrown away
-public func noop<P0, P1, P2, P3>(
-    _: P0,
+public func noop<P1, P2, P3>(
     _: P1,
     _: P2,
     _: P3
@@ -59,9 +44,7 @@ public func noop<P0, P1, P2, P3>(
 /// - Parameter _: Parameter will be thrown away
 /// - Parameter _: Parameter will be thrown away
 /// - Parameter _: Parameter will be thrown away
-/// - Parameter _: Parameter will be thrown away
-public func noop<P0, P1, P2, P3, P4>(
-    _: P0,
+public func noop<P1, P2, P3, P4>(
     _: P1,
     _: P2,
     _: P3,
@@ -77,9 +60,7 @@ public func noop<P0, P1, P2, P3, P4>(
 /// - Parameter _: Parameter will be thrown away
 /// - Parameter _: Parameter will be thrown away
 /// - Parameter _: Parameter will be thrown away
-/// - Parameter _: Parameter will be thrown away
-public func noop<P0, P1, P2, P3, P4, P5>(
-    _: P0,
+public func noop<P1, P2, P3, P4, P5>(
     _: P1,
     _: P2,
     _: P3,
@@ -97,9 +78,7 @@ public func noop<P0, P1, P2, P3, P4, P5>(
 /// - Parameter _: Parameter will be thrown away
 /// - Parameter _: Parameter will be thrown away
 /// - Parameter _: Parameter will be thrown away
-/// - Parameter _: Parameter will be thrown away
-public func noop<P0, P1, P2, P3, P4, P5, P6>(
-    _: P0,
+public func noop<P1, P2, P3, P4, P5, P6>(
     _: P1,
     _: P2,
     _: P3,
@@ -119,9 +98,7 @@ public func noop<P0, P1, P2, P3, P4, P5, P6>(
 /// - Parameter _: Parameter will be thrown away
 /// - Parameter _: Parameter will be thrown away
 /// - Parameter _: Parameter will be thrown away
-/// - Parameter _: Parameter will be thrown away
-public func noop<P0, P1, P2, P3, P4, P5, P6, P7>(
-    _: P0,
+public func noop<P1, P2, P3, P4, P5, P6, P7>(
     _: P1,
     _: P2,
     _: P3,
@@ -143,9 +120,7 @@ public func noop<P0, P1, P2, P3, P4, P5, P6, P7>(
 /// - Parameter _: Parameter will be thrown away
 /// - Parameter _: Parameter will be thrown away
 /// - Parameter _: Parameter will be thrown away
-/// - Parameter _: Parameter will be thrown away
-public func noop<P0, P1, P2, P3, P4, P5, P6, P7, P8>(
-    _: P0,
+public func noop<P1, P2, P3, P4, P5, P6, P7, P8>(
     _: P1,
     _: P2,
     _: P3,
@@ -169,9 +144,7 @@ public func noop<P0, P1, P2, P3, P4, P5, P6, P7, P8>(
 /// - Parameter _: Parameter will be thrown away
 /// - Parameter _: Parameter will be thrown away
 /// - Parameter _: Parameter will be thrown away
-/// - Parameter _: Parameter will be thrown away
-public func noop<P0, P1, P2, P3, P4, P5, P6, P7, P8, P9>(
-    _: P0,
+public func noop<P1, P2, P3, P4, P5, P6, P7, P8, P9>(
     _: P1,
     _: P2,
     _: P3,
@@ -181,5 +154,32 @@ public func noop<P0, P1, P2, P3, P4, P5, P6, P7, P8, P9>(
     _: P7,
     _: P8,
     _: P9
+) {}
+
+/// Can be used instead of an empty closure as a syntactic sugar
+/// when not using so many parentheses and underlines is preferred.
+/// All passed parameters will not be used and thrown away.
+/// Parameters:
+/// - Parameter _: Parameter will be thrown away
+/// - Parameter _: Parameter will be thrown away
+/// - Parameter _: Parameter will be thrown away
+/// - Parameter _: Parameter will be thrown away
+/// - Parameter _: Parameter will be thrown away
+/// - Parameter _: Parameter will be thrown away
+/// - Parameter _: Parameter will be thrown away
+/// - Parameter _: Parameter will be thrown away
+/// - Parameter _: Parameter will be thrown away
+/// - Parameter _: Parameter will be thrown away
+public func noop<P1, P2, P3, P4, P5, P6, P7, P8, P9, P10>(
+    _: P1,
+    _: P2,
+    _: P3,
+    _: P4,
+    _: P5,
+    _: P6,
+    _: P7,
+    _: P8,
+    _: P9,
+    _: P10
 ) {}
 
