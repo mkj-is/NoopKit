@@ -3,5 +3,5 @@ import XCTest
 import NoopKitTests
 
 var tests = [XCTestCaseEntry]()
-tests += NoopKitTests.allTests()
+tests += NoopTests.allTests()
 XCTMain(tests)
