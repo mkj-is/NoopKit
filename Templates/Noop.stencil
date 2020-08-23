@@ -1,0 +1,11 @@
+public func noop() {}
+
+{% for params in 0...9 %}
+/// Can be used instead of an empty closure as a syntactic sugar
+/// when not using so many parentheses and underlines is preferred.
+public func noop<{% for p in 0...params %}P{{ p }}{% if p < params %}, {% endif %}{% endfor %}>(
+    {% for p in 0...params %}_: P{{ p }}{% if p < params %},
+    {% endif %}{% endfor %}
+) {}
+
+{% endfor %}
