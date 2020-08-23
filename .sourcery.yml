@@ -1,0 +1,6 @@
+sources:
+  - Sources/NoopKit
+templates:
+  - Templates
+output:
+  Sources/NoopKit
