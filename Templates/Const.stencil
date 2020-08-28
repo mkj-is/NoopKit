@@ -4,7 +4,7 @@
 /// - Parameter value: Constant value which will be returned.
 /// - Returns: Closure throwing away all passed parameters
 ///            and returning passed value.
-public func constant<T>(
+public func const<T>(
     _ value: T
 ) -> () -> T {
     {
@@ -19,7 +19,7 @@ public func constant<T>(
 /// - Parameter value: Constant value which will be returned.
 /// - Returns: Closure throwing away all passed parameters
 ///            and returning passed value.
-public func constant<{% for p in 1...params %}P{{ p }}, {% endfor %}T>(
+public func const<{% for p in 1...params %}P{{ p }}, {% endfor %}T>(
     _ value: T
 ) -> ({% for p in 1...params %}P{{ p }}{% if p < params %}, {% endif %}{% endfor %}) -> T {
     { {% for p in 1...params %}_{% if p < params %}, {% endif %}{% endfor %} in

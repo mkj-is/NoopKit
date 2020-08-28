@@ -7,7 +7,7 @@
 /// - Parameter value: Constant value which will be returned.
 /// - Returns: Closure throwing away all passed parameters
 ///            and returning passed value.
-public func constant<T>(
+public func const<T>(
     _ value: T
 ) -> () -> T {
     {
@@ -21,7 +21,7 @@ public func constant<T>(
 /// - Parameter value: Constant value which will be returned.
 /// - Returns: Closure throwing away all passed parameters
 ///            and returning passed value.
-public func constant<P1, T>(
+public func const<P1, T>(
     _ value: T
 ) -> (P1) -> T {
     { _ in
@@ -35,7 +35,7 @@ public func constant<P1, T>(
 /// - Parameter value: Constant value which will be returned.
 /// - Returns: Closure throwing away all passed parameters
 ///            and returning passed value.
-public func constant<P1, P2, T>(
+public func const<P1, P2, T>(
     _ value: T
 ) -> (P1, P2) -> T {
     { _, _ in
@@ -49,7 +49,7 @@ public func constant<P1, P2, T>(
 /// - Parameter value: Constant value which will be returned.
 /// - Returns: Closure throwing away all passed parameters
 ///            and returning passed value.
-public func constant<P1, P2, P3, T>(
+public func const<P1, P2, P3, T>(
     _ value: T
 ) -> (P1, P2, P3) -> T {
     { _, _, _ in
@@ -63,7 +63,7 @@ public func constant<P1, P2, P3, T>(
 /// - Parameter value: Constant value which will be returned.
 /// - Returns: Closure throwing away all passed parameters
 ///            and returning passed value.
-public func constant<P1, P2, P3, P4, T>(
+public func const<P1, P2, P3, P4, T>(
     _ value: T
 ) -> (P1, P2, P3, P4) -> T {
     { _, _, _, _ in
@@ -77,7 +77,7 @@ public func constant<P1, P2, P3, P4, T>(
 /// - Parameter value: Constant value which will be returned.
 /// - Returns: Closure throwing away all passed parameters
 ///            and returning passed value.
-public func constant<P1, P2, P3, P4, P5, T>(
+public func const<P1, P2, P3, P4, P5, T>(
     _ value: T
 ) -> (P1, P2, P3, P4, P5) -> T {
     { _, _, _, _, _ in
@@ -91,7 +91,7 @@ public func constant<P1, P2, P3, P4, P5, T>(
 /// - Parameter value: Constant value which will be returned.
 /// - Returns: Closure throwing away all passed parameters
 ///            and returning passed value.
-public func constant<P1, P2, P3, P4, P5, P6, T>(
+public func const<P1, P2, P3, P4, P5, P6, T>(
     _ value: T
 ) -> (P1, P2, P3, P4, P5, P6) -> T {
     { _, _, _, _, _, _ in
@@ -105,7 +105,7 @@ public func constant<P1, P2, P3, P4, P5, P6, T>(
 /// - Parameter value: Constant value which will be returned.
 /// - Returns: Closure throwing away all passed parameters
 ///            and returning passed value.
-public func constant<P1, P2, P3, P4, P5, P6, P7, T>(
+public func const<P1, P2, P3, P4, P5, P6, P7, T>(
     _ value: T
 ) -> (P1, P2, P3, P4, P5, P6, P7) -> T {
     { _, _, _, _, _, _, _ in
@@ -119,7 +119,7 @@ public func constant<P1, P2, P3, P4, P5, P6, P7, T>(
 /// - Parameter value: Constant value which will be returned.
 /// - Returns: Closure throwing away all passed parameters
 ///            and returning passed value.
-public func constant<P1, P2, P3, P4, P5, P6, P7, P8, T>(
+public func const<P1, P2, P3, P4, P5, P6, P7, P8, T>(
     _ value: T
 ) -> (P1, P2, P3, P4, P5, P6, P7, P8) -> T {
     { _, _, _, _, _, _, _, _ in
@@ -133,7 +133,7 @@ public func constant<P1, P2, P3, P4, P5, P6, P7, P8, T>(
 /// - Parameter value: Constant value which will be returned.
 /// - Returns: Closure throwing away all passed parameters
 ///            and returning passed value.
-public func constant<P1, P2, P3, P4, P5, P6, P7, P8, P9, T>(
+public func const<P1, P2, P3, P4, P5, P6, P7, P8, P9, T>(
     _ value: T
 ) -> (P1, P2, P3, P4, P5, P6, P7, P8, P9) -> T {
     { _, _, _, _, _, _, _, _, _ in
@@ -147,7 +147,7 @@ public func constant<P1, P2, P3, P4, P5, P6, P7, P8, P9, T>(
 /// - Parameter value: Constant value which will be returned.
 /// - Returns: Closure throwing away all passed parameters
 ///            and returning passed value.
-public func constant<P1, P2, P3, P4, P5, P6, P7, P8, P9, P10, T>(
+public func const<P1, P2, P3, P4, P5, P6, P7, P8, P9, P10, T>(
     _ value: T
 ) -> (P1, P2, P3, P4, P5, P6, P7, P8, P9, P10) -> T {
     { _, _, _, _, _, _, _, _, _, _ in
