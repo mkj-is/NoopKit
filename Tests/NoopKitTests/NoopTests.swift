@@ -2,7 +2,7 @@ import XCTest
 import NoopKit
 
 final class NoopTests: XCTestCase {
-    func testNoopCall() {
+    func testResult() {
         XCTAssertTrue(noop(()) == ())
         XCTAssertTrue(noop((), ()) == ())
         XCTAssertTrue(noop((), (), ()) == ())
@@ -10,7 +10,16 @@ final class NoopTests: XCTestCase {
         XCTAssertTrue(noop((), (), (), (), ()) == ())
     }
 
+    func testCompletions() {
+        let completions = Completions()
+
+        completions.function(with: noop)
+        completions.functionTwo(with: noop)
+        completions.functionThree(with: noop)
+    }
+
     static var allTests = [
-        ("testNoopCall", testNoopCall),
+        ("testResult", testResult),
+        ("testCompletions", testCompletions),
     ]
 }
