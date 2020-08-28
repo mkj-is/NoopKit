@@ -35,5 +35,3 @@ final class IdTests: XCTestCase {
         ("testHigherOrderFunctions", testHigherOrderFunctions),
     ]
 }
-
-
