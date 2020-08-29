@@ -5,4 +5,4 @@ templates:
 output:
   Sources/NoopKit
 args:
-  parameterCount: 10
+  parameterCount: 5
