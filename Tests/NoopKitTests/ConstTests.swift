@@ -19,6 +19,6 @@ final class ConstTests: XCTestCase {
 
     static var allTests = [
         ("testResult", testResult),
-        ("testHigherOrderFunctions", testHigherOrderFunctions),
+        ("testHigherOrderFunctions", testHigherOrderFunctions)
     ]
 }

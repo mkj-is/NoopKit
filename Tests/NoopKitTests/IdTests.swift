@@ -32,6 +32,6 @@ final class IdTests: XCTestCase {
 
     static var allTests = [
         ("testResult", testResult),
-        ("testHigherOrderFunctions", testHigherOrderFunctions),
+        ("testHigherOrderFunctions", testHigherOrderFunctions)
     ]
 }

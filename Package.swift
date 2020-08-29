@@ -7,7 +7,7 @@ let package = Package(
     products: [
         .library(
             name: "NoopKit",
-            targets: ["NoopKit"]),
+            targets: ["NoopKit"])
     ],
     targets: [
         .target(
@@ -15,6 +15,6 @@ let package = Package(
             dependencies: []),
         .testTarget(
             name: "NoopKitTests",
-            dependencies: ["NoopKit"]),
+            dependencies: ["NoopKit"])
     ]
 )

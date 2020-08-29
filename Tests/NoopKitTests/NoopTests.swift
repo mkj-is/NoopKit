@@ -20,6 +20,6 @@ final class NoopTests: XCTestCase {
 
     static var allTests = [
         ("testResult", testResult),
-        ("testCompletions", testCompletions),
+        ("testCompletions", testCompletions)
     ]
 }
