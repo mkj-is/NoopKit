@@ -7,6 +7,7 @@
 /// - Parameter value: Constant value which will be returned.
 /// - Returns: Closure throwing away all passed parameters
 ///            and returning passed value.
+@inlinable
 public func const<T>(
     _ value: T
 ) -> () -> T {
@@ -21,6 +22,7 @@ public func const<T>(
 /// - Parameter value: Constant value which will be returned.
 /// - Returns: Closure throwing away all passed parameters
 ///            and returning passed value.
+@inlinable
 public func const<P1, T>(
     _ value: T
 ) -> (P1) -> T {
@@ -35,6 +37,7 @@ public func const<P1, T>(
 /// - Parameter value: Constant value which will be returned.
 /// - Returns: Closure throwing away all passed parameters
 ///            and returning passed value.
+@inlinable
 public func const<P1, P2, T>(
     _ value: T
 ) -> (P1, P2) -> T {
@@ -49,6 +52,7 @@ public func const<P1, P2, T>(
 /// - Parameter value: Constant value which will be returned.
 /// - Returns: Closure throwing away all passed parameters
 ///            and returning passed value.
+@inlinable
 public func const<P1, P2, P3, T>(
     _ value: T
 ) -> (P1, P2, P3) -> T {
@@ -63,6 +67,7 @@ public func const<P1, P2, P3, T>(
 /// - Parameter value: Constant value which will be returned.
 /// - Returns: Closure throwing away all passed parameters
 ///            and returning passed value.
+@inlinable
 public func const<P1, P2, P3, P4, T>(
     _ value: T
 ) -> (P1, P2, P3, P4) -> T {
@@ -77,6 +82,7 @@ public func const<P1, P2, P3, P4, T>(
 /// - Parameter value: Constant value which will be returned.
 /// - Returns: Closure throwing away all passed parameters
 ///            and returning passed value.
+@inlinable
 public func const<P1, P2, P3, P4, P5, T>(
     _ value: T
 ) -> (P1, P2, P3, P4, P5) -> T {

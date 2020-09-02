@@ -5,6 +5,7 @@
 /// Parameters:
 {% for p in 1...params %}/// - Parameter _: Parameter will be returned in a tuple.
 {% endfor %}
+@inlinable
 public func id<{% for p in 1...params %}P{{ p }}{% if p < params %}, {% endif %}{% endfor %}>(
     {% for p in 1...params %}_ p{{ p }}: P{{ p }}{% if p < params %},
     {% endif %}{% endfor %}

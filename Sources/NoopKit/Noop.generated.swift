@@ -4,6 +4,7 @@
 /// Can be used instead of an empty closure as a syntactic sugar
 /// when not using so many parentheses and underlines is preferred.
 /// All passed parameters will not be used and thrown away.
+@inlinable
 public func noop() {}
 
 /// Can be used instead of an empty closure as a syntactic sugar
@@ -11,6 +12,7 @@ public func noop() {}
 /// All passed parameters will not be used and thrown away.
 /// Parameters:
 /// - Parameter _: Parameter will be thrown away
+@inlinable
 public func noop<P1>(
     _: P1
 ) {}
@@ -21,6 +23,7 @@ public func noop<P1>(
 /// Parameters:
 /// - Parameter _: Parameter will be thrown away
 /// - Parameter _: Parameter will be thrown away
+@inlinable
 public func noop<P1, P2>(
     _: P1,
     _: P2
@@ -33,6 +36,7 @@ public func noop<P1, P2>(
 /// - Parameter _: Parameter will be thrown away
 /// - Parameter _: Parameter will be thrown away
 /// - Parameter _: Parameter will be thrown away
+@inlinable
 public func noop<P1, P2, P3>(
     _: P1,
     _: P2,
@@ -47,6 +51,7 @@ public func noop<P1, P2, P3>(
 /// - Parameter _: Parameter will be thrown away
 /// - Parameter _: Parameter will be thrown away
 /// - Parameter _: Parameter will be thrown away
+@inlinable
 public func noop<P1, P2, P3, P4>(
     _: P1,
     _: P2,
@@ -63,6 +68,7 @@ public func noop<P1, P2, P3, P4>(
 /// - Parameter _: Parameter will be thrown away
 /// - Parameter _: Parameter will be thrown away
 /// - Parameter _: Parameter will be thrown away
+@inlinable
 public func noop<P1, P2, P3, P4, P5>(
     _: P1,
     _: P2,

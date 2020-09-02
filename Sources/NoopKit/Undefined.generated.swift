@@ -3,6 +3,7 @@
 
 /// Placeholder function to make clear it needs to be implemented.
 /// It is easier to find than empty braces.
+@inlinable
 public func undefined<T>() -> T {
     fatalError("Implement this undefined function or closure.")
 }
@@ -13,6 +14,7 @@ public func undefined<T>() -> T {
 /// Parameters:
 /// - Parameter _: Parameter will be printed when passed
 /// Returns: Never returns, calls fatal error internally.
+@inlinable
 public func undefined<P1, T>(
     _ p1: P1
 ) -> T {
@@ -26,6 +28,7 @@ public func undefined<P1, T>(
 /// - Parameter _: Parameter will be printed when passed
 /// - Parameter _: Parameter will be printed when passed
 /// Returns: Never returns, calls fatal error internally.
+@inlinable
 public func undefined<P1, P2, T>(
     _ p1: P1,
     _ p2: P2
@@ -41,6 +44,7 @@ public func undefined<P1, P2, T>(
 /// - Parameter _: Parameter will be printed when passed
 /// - Parameter _: Parameter will be printed when passed
 /// Returns: Never returns, calls fatal error internally.
+@inlinable
 public func undefined<P1, P2, P3, T>(
     _ p1: P1,
     _ p2: P2,
@@ -58,6 +62,7 @@ public func undefined<P1, P2, P3, T>(
 /// - Parameter _: Parameter will be printed when passed
 /// - Parameter _: Parameter will be printed when passed
 /// Returns: Never returns, calls fatal error internally.
+@inlinable
 public func undefined<P1, P2, P3, P4, T>(
     _ p1: P1,
     _ p2: P2,
@@ -77,6 +82,7 @@ public func undefined<P1, P2, P3, P4, T>(
 /// - Parameter _: Parameter will be printed when passed
 /// - Parameter _: Parameter will be printed when passed
 /// Returns: Never returns, calls fatal error internally.
+@inlinable
 public func undefined<P1, P2, P3, P4, P5, T>(
     _ p1: P1,
     _ p2: P2,
