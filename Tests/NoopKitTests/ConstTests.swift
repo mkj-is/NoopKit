@@ -17,7 +17,7 @@ final class ConstTests: XCTestCase {
         XCTAssertEqual(optional.flatMap(const(5)), 5)
     }
 
-    func testClosurePerformance() {
+    func testConstClosurePerformance() {
         let completions = Completions()
         measure {
             for _ in 0..<100_000 {
@@ -28,7 +28,7 @@ final class ConstTests: XCTestCase {
         }
     }
 
-    func testNamedFunctionPerformance() {
+    func testConstNamedFunctionPerformance() {
         let completions = Completions()
         measure {
             for _ in 0..<100_000 {
@@ -39,8 +39,10 @@ final class ConstTests: XCTestCase {
         }
     }
 
-    static var allTests = [
+    static let allTests = [
         ("testResult", testResult),
-        ("testHigherOrderFunctions", testHigherOrderFunctions)
+        ("testHigherOrderFunctions", testHigherOrderFunctions),
+        ("testConstClosurePerformance", testConstClosurePerformance),
+        ("testConstNamedFunctionPerformance", testConstNamedFunctionPerformance)
     ]
 }
