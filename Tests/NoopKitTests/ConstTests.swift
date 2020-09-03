@@ -17,6 +17,28 @@ final class ConstTests: XCTestCase {
         XCTAssertEqual(optional.flatMap(const(5)), 5)
     }
 
+    func testClosurePerformance() {
+        let completions = Completions()
+        measure {
+            for _ in 0..<100_000 {
+                completions.runFour(with: { true })
+                completions.runFive(with: { _ in true })
+                completions.runSix(with: { _, _ in true })
+            }
+        }
+    }
+
+    func testNamedFunctionPerformance() {
+        let completions = Completions()
+        measure {
+            for _ in 0..<100_000 {
+                completions.runFour(with: const(true))
+                completions.runFive(with: const(false))
+                completions.runSix(with: const(true))
+            }
+        }
+    }
+
     static var allTests = [
         ("testResult", testResult),
         ("testHigherOrderFunctions", testHigherOrderFunctions)

@@ -13,18 +13,18 @@ final class NoopTests: XCTestCase {
     func testCompletions() {
         let completions = Completions()
 
-        completions.function(with: noop)
-        completions.functionTwo(with: noop)
-        completions.functionThree(with: noop)
+        completions.run(with: noop)
+        completions.runTwo(with: noop)
+        completions.runThree(with: noop)
     }
 
     func testClosurePerformace() {
         let completions = Completions()
         measure {
             for _ in 0..<100_000 {
-                completions.function(with: noop)
-                completions.functionTwo(with: noop)
-                completions.functionThree(with: noop)
+                completions.run(with: noop)
+                completions.runTwo(with: noop)
+                completions.runThree(with: noop)
             }
         }
     }
@@ -33,9 +33,9 @@ final class NoopTests: XCTestCase {
         let completions = Completions()
         measure {
             for _ in 0..<100_000 {
-                completions.function {}
-                completions.functionTwo { _ in }
-                completions.functionThree { _, _ in }
+                completions.run {}
+                completions.runTwo { _ in }
+                completions.runThree { _, _ in }
             }
         }
     }

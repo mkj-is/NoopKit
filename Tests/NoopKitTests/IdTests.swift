@@ -30,6 +30,24 @@ final class IdTests: XCTestCase {
         XCTAssertEqual(optional.flatMap(id), optional)
     }
 
+    func testClosurePerformance() {
+        let array: [Int?] = [0, 1, nil, 2, nil]
+        measure {
+            for _ in 0..<100_000 {
+                _ = array.compactMap { $0 }
+            }
+        }
+    }
+
+    func testNamedFunctionPerformance() {
+        let array: [Int?] = [0, 1, nil, 2, nil]
+        measure {
+            for _ in 0..<100_000 {
+                _ = array.compactMap(id)
+            }
+        }
+    }
+
     static var allTests = [
         ("testResult", testResult),
         ("testHigherOrderFunctions", testHigherOrderFunctions)
