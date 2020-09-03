@@ -14,19 +14,53 @@ Day by day we are using more functional programming in our apps. The turning poi
 
 In UIKit it was enough to write empty method or not connect IBAction in the interface builder. But as you can see this has a downside, it is hard to search for such an empty method or unused control.
 
-Similarly, it is hard to search for unimplemented closures. They can be a mess of underlines, brackets and parentheses. I wanted to improve the experience during active development by passing named functions, which enable us to make more readable code for human and are more discoverable.
+Similarly, it is hard to search for unimplemented closures passed to higher-order functions. They can be a mess of underlines, brackets and parentheses. I wanted to improve the experience during active development by passing named functions, which enable us to make more readable code for human and are more discoverable.
 
 There are typical use-cases where these free functions shine:
 
 - SwiftUI previews.
 - Tests.
 - Unimplemented view bindings.
+- Unimplemented completion handlers.
 
-I also wanted to learn Sourcery and see how variadic generics can be used in Swift until [proposed solution from Generics manifesto](https://www.notion.so/futured/Generov-n-k-du-Sourcery-variadick-generika-c49973f9238d43e78cbe913d9403a309#3b4a6b7346d743e0adbc9397ca7b9fbc) is added to the language.
+I also wanted to learn Sourcery and see how variadic generics can be used in Swift until [proposed solution from Generics manifesto](https://github.com/apple/swift/blob/master/docs/GenericsManifesto.md#variadic-generics) is added to the language.
 
 ## Usage examples
 
-*TBD*
+### No-op
+
+Can be used either as a temporary placeholder or where no action is required. Sometimes the parameter is not optional and you need to
+pass a value.
+
+```swift
+server.load { _ in }
+server.load(completion: noop)
+
+Stepper()
+```
+
+### Undefined
+
+```swift
+Button("Tap and crash", action: undefined)
+Stepper("Step to crash", onIncrement: undefined, onDecrement: undefined)
+```
+
+### Constant
+
+### Identity
+
+Identity (`id`) function returns all the arguments it receives as a tuple. This is mostly useful in a function with one parameter.
+Typical use-case is the `compactMap` method.
+
+```swift
+// Using closures
+[1, nil, 2, nil].compactMap { $0 }
+// Using id function
+[1, nil, 2, nil].compactMap(id)
+```
+
+As you can see, the `id` can easily replace any  `{ $0 }` closure returning one anonymous parameter.
 
 ## Installation
 
