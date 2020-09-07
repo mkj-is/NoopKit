@@ -6,7 +6,7 @@ By empty closures we mean:
 
 - Closures not doing anything (not calling any other code).
 - Closures returning constant value.
-- Closures returning the same parameters whch were passed to them.
+- Closures returning the same parameters which were passed to them.
 - More broadly closures with no side-effects.
 
 ## Motivation
