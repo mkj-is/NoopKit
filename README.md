@@ -98,7 +98,7 @@ All contributions are welcome.
 
 Project was created by [Matěj Kašpar Jirásek](https://github.com/mkj-is).
 
-Project is licensed under [MIT license](LICENSE.txt).
+Project is licensed under [MIT license](LICENSE).
 
 ## Acknowledgements
 
