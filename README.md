@@ -11,11 +11,16 @@ By empty closures we mean:
 
 ## Motivation
 
-Day by day we are using more functional programming in our apps. The turning point for mainstream developer on Apple platforms was the introduction of SwiftUI.
+Day by day we are using more functional programming in our apps.
+The turning point for mainstream developer on Apple platforms was the introduction of SwiftUI.
 
-In UIKit it was enough to write empty method or not connect IBAction in the interface builder. But as you can see this has a downside, it is hard to search for an empty method or unused control.
+In UIKit it was enough to write empty method or not connect IBAction in the interface builder.
+But as you can see this has a downside, it is hard to search for an empty method or unused control.
 
-Similarly, it is hard to search for unimplemented closures passed to higher-order functions. They can be a mess of underlines, brackets and parentheses. I wanted to improve the experience during active development by passing named functions, which enable us to make more readable code for human and are more discoverable.
+Similarly, it is hard to search for unimplemented closures passed to higher-order functions.
+They can be a mess of underlines, brackets and parentheses. I wanted to improve the experience
+during active development by passing named functions, which enable us to make more readable code
+for human and are more discoverable.
 
 There are typical use-cases where these free functions shine:
 
@@ -24,7 +29,9 @@ There are typical use-cases where these free functions shine:
 - Unimplemented view bindings.
 - Unimplemented completion handlers.
 
-Secondarily, I wanted to learn Sourcery and see how variadic generics can be used in Swift until [proposed solution from Generics manifesto](https://github.com/apple/swift/blob/master/docs/GenericsManifesto.md#variadic-generics) is added to the language.
+Secondarily, I wanted to learn Sourcery and see how variadic generics can be used in Swift until
+[proposed solution from Generics manifesto](https://github.com/apple/swift/blob/master/docs/GenericsManifesto.md#variadic-generics)
+is added to the language.
 
 ## Usage examples
 
@@ -32,7 +39,9 @@ This library provides four free pure functions with variadic generics.
 
 ### No-op
 
-Can be used either as a temporary placeholder when calling higher-order functions where no action is required. Sometimes the parameter is not optional and you need to pass a value.
+Can be used either as a temporary placeholder when calling higher-order functions
+where no action is required. Sometimes the parameter is not optional and you need
+to pass a value.
 
 ```swift
 // With anonymous closure
@@ -52,7 +61,9 @@ func animate(with completion: (Bool) -> Void = noop)
 
 ### Undefined
 
-Similar to `noop`, `undefined` is a placeholder function, but instead of doing nothing it calls fatal error. This function makes it clear to the developer, that it needs to be implemented. It is easy to find, which is not the case for empty closures.
+Similar to `noop`, `undefined` is a placeholder function, but instead of doing nothing it calls
+fatal error. This function makes it clear to the developer, that it needs to be implemented.
+It is easy to find, which is not the case for empty closures.
 
 ```swift
 Button("Tap and crash", action: undefined)
@@ -61,7 +72,9 @@ Stepper("Step to crash", onIncrement: undefined, onDecrement: undefined)
 
 ### Constant
 
-`Undefined` and `noop` do not work with return values. Const function takes one parameter and returns a closure, which throws away all the parameters and constantly returns the provided value.
+`Undefined` and `noop` do not work with return values.
+Const function takes one parameter and returns a closure, which throws away all the parameters
+and constantly returns the provided value.
 
 ```swift
 // Using closure
@@ -72,7 +85,8 @@ validate(string: "Some string", using: const(true))
 
 ### Identity
 
-Identity (`id`) function returns all the arguments it receives as a tuple. This is useful in a function with one parameter.
+Identity (`id`) function returns all the arguments it receives as a tuple.
+This is useful in a function with one parameter.
 Typical use-case is the `compactMap` method.
 
 ```swift
