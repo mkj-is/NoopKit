@@ -92,6 +92,18 @@ Add this package dependency to your Xcode project or add following line to your 
 .package(url: "https://github.com/mkj-is/NoopKit.git", from: "0.1.0")
 ```
 
+Feel free to add some of these free functions using copy & paste if you want to experiment
+and don't need the full package.
+
+## Disclosure
+
+Most of these functions are just a syntactic sugar. Be mindful when adding them
+to your project. Swift is a complicated language as is and introducing more syntactic
+sugar to your project can increase the complexity and understandability of your code.
+I personally don't use those functions on team projects, but experimentally
+on my personal project. If introducing these functions to your codebase make sure
+every contributor understands them and accepts their use.
+
 ## Authors & contributing
 
 All contributions are welcome.
