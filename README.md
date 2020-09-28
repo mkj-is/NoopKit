@@ -1,4 +1,4 @@
-# NoopKit
+![# NoopKit](Meta/Logo.svg)
 
 Short for **No-operation Kit**. Set of functions making work with empty closures a breeze.
 
