@@ -45,9 +45,9 @@ to pass a value.
 
 ```swift
 // With anonymous closure
-server.load { _ in }
+URLSession.shared.dataTask(with: url) { _, _, _ in }.resume()
 // Named function
-server.load(completion: noop)
+URLSession.shared.dataTask(with: url, completionHandler: noop).resume()
 ```
 
 Another typical place for `noop` function is as a default parameter in higher order functions.
