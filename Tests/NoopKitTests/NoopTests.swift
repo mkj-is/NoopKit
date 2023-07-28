@@ -18,7 +18,7 @@ final class NoopTests: XCTestCase {
         completions.runThree(with: noop)
     }
 
-    func testNoopClosurePerformace() {
+    func testNoopClosurePerformance() {
         let completions = Completions()
         measure {
             for _ in 0..<100_000 {
@@ -29,7 +29,7 @@ final class NoopTests: XCTestCase {
         }
     }
 
-    func testNoopNamedFunctionPerformace() {
+    func testNoopNamedFunctionPerformance() {
         let completions = Completions()
         measure {
             for _ in 0..<100_000 {
@@ -43,7 +43,7 @@ final class NoopTests: XCTestCase {
     static let allTests = [
         ("testResult", testResult),
         ("testCompletions", testCompletions),
-        ("testNoopClosurePerformace", testNoopClosurePerformace),
-        ("testNoopNamedFunctionPerformance", testNoopNamedFunctionPerformace)
+        ("testNoopClosurePerformace", testNoopClosurePerformance),
+        ("testNoopNamedFunctionPerformance", testNoopNamedFunctionPerformance)
     ]
 }
