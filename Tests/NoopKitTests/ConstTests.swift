@@ -40,11 +40,4 @@ final class ConstTests: XCTestCase {
             }
         }
     }
-
-    static let allTests = [
-        ("testResult", testResult),
-        ("testHigherOrderFunctions", testHigherOrderFunctions),
-        ("testConstClosurePerformance", testConstClosurePerformance),
-        ("testConstNamedFunctionPerformance", testConstNamedFunctionPerformance)
-    ]
 }
