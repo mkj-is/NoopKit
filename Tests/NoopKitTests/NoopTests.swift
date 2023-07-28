@@ -39,11 +39,4 @@ final class NoopTests: XCTestCase {
             }
         }
     }
-
-    static let allTests = [
-        ("testResult", testResult),
-        ("testCompletions", testCompletions),
-        ("testNoopClosurePerformace", testNoopClosurePerformance),
-        ("testNoopNamedFunctionPerformance", testNoopNamedFunctionPerformance)
-    ]
 }

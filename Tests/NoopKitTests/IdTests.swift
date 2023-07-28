@@ -47,11 +47,4 @@ final class IdTests: XCTestCase {
             }
         }
     }
-
-    static let allTests = [
-        ("testResult", testResult),
-        ("testHigherOrderFunctions", testHigherOrderFunctions),
-        ("testIdClosurePerformance", testIdClosurePerformance),
-        ("testIdNamedFunctionPerformance", testIdNamedFunctionPerformance)
-    ]
 }
