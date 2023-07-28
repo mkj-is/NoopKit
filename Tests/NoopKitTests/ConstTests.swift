@@ -3,10 +3,12 @@ import NoopKit
 
 final class ConstTests: XCTestCase {
     func testResult() {
-        XCTAssertTrue(const(())() == ())
+        let f: (Void, Void) -> Void = const(())
+        XCTAssertTrue(f((), ()) == ())
 
         let n = Int.random(in: 0...100)
-        XCTAssertTrue(const(n)() == n)
+        let f2: () -> Int = const(n)
+        XCTAssertTrue(f2() == n)
     }
 
     func testHigherOrderFunctions() {
