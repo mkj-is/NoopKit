@@ -1,5 +1,6 @@
-// Generated using Sourcery 1.0.0 — https://github.com/krzysztofzablocki/Sourcery
+// Generated using Sourcery 2.0.2 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
+#if(swift(<5.9))
 
 /// Can be used instead of an empty closure as a syntactic sugar
 /// when not using so many parentheses and underlines is preferred.
@@ -77,3 +78,5 @@ public func noop<P1, P2, P3, P4, P5>(
     _: P5
 ) {}
 
+
+#endif

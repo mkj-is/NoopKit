@@ -1,5 +1,6 @@
-// Generated using Sourcery 1.0.0 — https://github.com/krzysztofzablocki/Sourcery
+// Generated using Sourcery 2.0.2 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
+#if(swift(<5.9))
 
 /// Placeholder function to make clear it needs to be implemented.
 /// It is easier to find than empty braces.
@@ -93,3 +94,5 @@ public func undefined<P1, P2, P3, P4, P5, T>(
     fatalError("Implement this undefined function or closure.\nParameters passed: \(p1), \(p2), \(p3), \(p4), \(p5)")
 }
 
+
+#endif

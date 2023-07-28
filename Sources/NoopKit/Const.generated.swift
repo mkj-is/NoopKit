@@ -1,5 +1,6 @@
-// Generated using Sourcery 1.0.0 — https://github.com/krzysztofzablocki/Sourcery
+// Generated using Sourcery 2.0.2 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
+#if(swift(<5.9))
 
 /// Higher-order function returning function which returns
 /// constant value.
@@ -91,3 +92,5 @@ public func const<P1, P2, P3, P4, P5, T>(
     }
 }
 
+
+#endif

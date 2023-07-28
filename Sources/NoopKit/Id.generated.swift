@@ -1,5 +1,6 @@
-// Generated using Sourcery 1.0.0 — https://github.com/krzysztofzablocki/Sourcery
+// Generated using Sourcery 2.0.2 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
+#if(swift(<5.9))
 
 /// Function used for passing to higher-order functions.
 /// It returns all the passed parameters as a tuple.
@@ -81,3 +82,5 @@ public func id<P1, P2, P3, P4, P5>(
     (p1, p2, p3, p4, p5)
 }
 
+
+#endif
