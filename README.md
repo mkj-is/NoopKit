@@ -33,6 +33,9 @@ Secondarily, I wanted to learn Sourcery and see how variadic generics can be use
 [proposed solution from Generics manifesto](https://github.com/apple/swift/blob/master/docs/GenericsManifesto.md#variadic-generics)
 is added to the language.
 
+As of Swift 5.9 the implementation changed to parameter packs. Generated code is still kept to keep backward
+compatibility for older Swift versions.
+
 ## Usage examples
 
 This library provides four free pure functions with variadic generics.
@@ -103,7 +106,7 @@ As you can see, the `id` can replace any  `{ $0 }` closure returning one anonymo
 Add this package dependency to your Xcode project or add following line to your `Package.swift` file:
 
 ```swift
-.package(url: "https://github.com/mkj-is/NoopKit.git", from: "0.1.0")
+.package(url: "https://github.com/mkj-is/NoopKit.git", from: "1.0.0")
 ```
 
 Feel free to add some of these free functions using copy & paste if you want to experiment
