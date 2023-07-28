@@ -1,3 +1,5 @@
+#if(swift(<5.9))
+
 /// Can be used instead of an empty closure as a syntactic sugar
 /// when not using so many parentheses and underlines is preferred.
 /// All passed parameters will not be used and thrown away.
@@ -18,3 +20,5 @@ public func noop<{% for p in 1...params %}P{{ p }}{% if p < params %}, {% endif 
 ) {}
 
 {% endfor %}
+
+#endif

@@ -1,3 +1,5 @@
+#if(swift(<5.9))
+
 /// Placeholder function to make clear it needs to be implemented.
 /// It is easier to find than empty braces.
 @inlinable
@@ -22,3 +24,5 @@ public func undefined<{% for p in 1...params %}P{{ p }}, {% endfor %}T>(
 }
 
 {% endfor %}
+
+#endif
